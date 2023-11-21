@@ -14,11 +14,11 @@ export function app(): express.Express {
 
   const commonEngine = new CommonEngine();
 
-  server.set('view engine', 'html');
-  server.set('views', browserDistFolder);
+  server.set("view engine", "html");
+  server.set("views", browserDistFolder);
 
   // Example Express Rest API endpoints
-  server.get('/api/**', (req, res) => {
+  server.get("/api/**", (req, res) => {
     res.send("Hello");
   });
   // Serve static files from /browser
